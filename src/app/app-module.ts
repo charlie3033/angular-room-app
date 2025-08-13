@@ -6,13 +6,17 @@ import { App } from './app';
 import { Rooms } from './rooms/rooms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RoomsList } from './rooms/rooms-list/rooms-list';
+import { Header } from './header/header';
+import { Cont } from './cont/cont';
+
 
 
 @NgModule({
   declarations: [
     App,
     Rooms,
-    RoomsList
+    RoomsList,
+    Header
   ],
   imports: [
     BrowserModule,

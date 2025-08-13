@@ -1,10 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-/* @import '../node_modules/bootstrap/dist/css/bootstrap.min.css'; */
 .even{
-  background-color: steelblue;
-  color:white;
+  background-color: steelblue !important;
+  color:white !important;
 }
 .odd{
-  background-color: tomato;
-  color:white;
+  background-color: tomato !important;
+  color:white !important;
 }
