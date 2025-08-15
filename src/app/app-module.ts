@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RoomsList } from './rooms/rooms-list/rooms-list';
 import { Header } from './header/header';
 import { Cont } from './cont/cont';
+import { Employee } from "./employee/employee";
+import { APP_CONFIG, APP_SERVICE_CONFIG } from './AppConfig/appconfig.service';
 
 
 
@@ -17,16 +19,24 @@ import { Cont } from './cont/cont';
     Rooms,
     RoomsList,
     Header
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
-  ],
+    BrowserAnimationsModule,
+    Cont,
+    Employee
+],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    {
+      provide: APP_SERVICE_CONFIG,
+      useValue: APP_CONFIG,
+
+    }
   ],
   bootstrap: [App]
 })
