@@ -10,6 +10,8 @@ import { Header } from './header/header';
 import { Cont } from './cont/cont';
 import { Employee } from "./employee/employee";
 import { APP_CONFIG, APP_SERVICE_CONFIG } from './AppConfig/appconfig.service';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+
 
 
 
@@ -26,12 +28,14 @@ import { APP_CONFIG, APP_SERVICE_CONFIG } from './AppConfig/appconfig.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     Cont,
-    Employee
+    Employee,
+
 ],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideClientHydration(withEventReplay()),
+    provideHttpClient(withFetch()),
     {
       provide: APP_SERVICE_CONFIG,
       useValue: APP_CONFIG,

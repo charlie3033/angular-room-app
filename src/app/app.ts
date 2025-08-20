@@ -8,13 +8,16 @@ import { localStorageToken } from './localstorage.token';
 })
 export class App implements OnInit{
 
-  constructor(@Inject(localStorageToken) private localStorage: any){
+  constructor(@Inject(localStorageToken) private localStorage: any ){
 
   }
 
   protected readonly title = signal('hotel-inventory');
 
   ngOnInit(){
+
     this.localStorage.setItem('name','HiltonHotel');
+    
+
   }
 }
